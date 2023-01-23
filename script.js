@@ -8,8 +8,11 @@ var zipcode = document.getElementById("zipcode").value;
 var emai = email.getElementById("email").value;
 
 function validate(){
-
-    hihihii
+    let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
     /*if(username.tooLong() || username.tooShort()){
         window.location = "sell.html";
         
