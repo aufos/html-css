@@ -84,26 +84,26 @@
         <div class="contentchild">
             <form method="signin" action="index.html">
         
-                <label for="">Name:</label><input type="text" name = "name"><br><br>
+                <label for="">Name:</label><input type="text" name = "name" required><br><br>
             
                 <label for=""> Description: </label> <br><br>
-                <textarea name="" id="" cols="40" rows="10"></textarea><br><br>
+                <textarea name="" id="" cols="40" rows="10" required></textarea><br><br>
             
-                <label for=""> Quantity: </label><input type="number" placeholder="0" min="0" name = "Quantity"><br><br>
+                <label for=""> Quantity: </label><input type="number" placeholder="0" min="0" name = "Quantity" required><br><br>
             
                <label>Price per item €</label>
-                <input type="number" placeholder="0.00" required name="price" min="0.00" value="0.00" step="0.01" >
+                <input type="number" placeholder="0.00" required name="price" min="0.00" value="0.00" step="0.01" required>
                 <br><br>
             
                 <label for=""> Catagory: <br>
-                <input type="checkbox" name="catagory" value="clothes"> clothes
+                <input type="checkbox" name="catagory" value="clothes" required> clothes
                 <input type="checkbox" name="catagory" value="shoes"> shoes
                 <input type="checkbox" name="catagory" value="books"> books
                 <input type="checkbox" name="catagory" value="electricalDevvices"> electrical devices
                 <input type="checkbox" name="catagory" value="other"> other <br><br>
             
                 <label for="">Upload a picture for your product:  </label>
-                <input type="file" name="Image" accept="image/png, image/gif, image/jpeg" /><br><br>
+                <input type="file" name="Image" accept="image/png, image/gif, image/jpeg" required><br><br>
                 
             
                 <button type="submit" class="b">Confirm</button>
