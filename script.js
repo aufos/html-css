@@ -9,7 +9,7 @@ var emai = email.getElementById("email").value;
 
 function validate(){
 
-
+    hihihii
     /*if(username.tooLong() || username.tooShort()){
         window.location = "sell.html";
         
