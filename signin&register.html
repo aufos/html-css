@@ -83,7 +83,8 @@
             <h2>Register</h2>
             <form method="signin" action="index.html">
                 
-                <label for="">Your Username: </label><input type="text" name = "Username" id="username" required><br><br>
+                <label for="">Your Username: </label><input type="text" name = "Username" id="username" required
+                    minlength="5" maxlength="12"><br><br>
             
                 <label for="">Your Password: </label><input type="password" name = "password" id="password" required>
                 <label for="">Confirm your password: </label><input type="password" name = "confirmPassword" id="repeatPassword"required><br><br>
@@ -108,7 +109,7 @@
                 <textarea name="" id="" cols="40" rows="10" id="about"></textarea>
                 <br><br>
             
-                <button type="submit" class="b">Register</button>
+                <button type="submit" class="b" onclick="validate()">Register</button>
             
             </form>
 
