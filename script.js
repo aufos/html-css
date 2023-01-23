@@ -15,6 +15,6 @@ function validate(){
   }
    
 
-    alert("Welcome");
+    alert("Welcme");
         window.location = "index.html";
 }
