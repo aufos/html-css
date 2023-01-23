@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin / Register</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
     <style>
         .content{
@@ -82,29 +83,29 @@
             <h2>Register</h2>
             <form method="signin" action="index.html">
                 
-                <label for="">Your Username: </label><input type="text" name = "Username"><br><br>
+                <label for="">Your Username: </label><input type="text" name = "Username" id="username" required><br><br>
             
-                <label for="">Your Password: </label><input type="password" name = "password">
-                <label for="">Confirm your password: </label><input type="password" name = "confirmPassword"><br><br>
+                <label for="">Your Password: </label><input type="password" name = "password" id="password" required>
+                <label for="">Confirm your password: </label><input type="password" name = "confirmPassword" id="repeatPassword"required><br><br>
             
-                <label for="">Your full name: </label><input type="text" name = "fullname"><br><br>
+                <label for="">Your full name: </label><input type="text" name = "fullname" id="fullName" required><br><br>
             
-                <label for=""> Address: </label><input type="text" name = "Address">
-                <label for=""> Country: </label><input type="text" name = "Country">
-                <label for=""> Zipcode: </label><input type="text" name = "Zipcode"><br><br>
+                <label for=""> Address: </label><input type="text" name = "Address" id="address">
+                <label for=""> Country: </label><input type="text" name = "Country" id="country" required >
+                <label for=""> Zipcode: </label><input type="text" name = "Zipcode" id="zipcode" required ><br><br>
             
-                <label for=""> Email: </label><input type="email" name = "email"><br><br>
+                <label for=""> Email: </label><input type="email" name = "email" id="email" required><br><br>
             
                 <label for=""> Sex: </label>
-                <input type="checkbox" name="sex" value="man"> man
-                <input type="checkbox" name="sex" value="women"> women
-                <input type="checkbox" name="sex" value="non-binary"> non-binary 
-                <input type="checkbox" name="sex" value="rather not tell"> rather not tell <br><br>
+                <input type="radio" name="sex" value="man" required> man
+                <input type="radio" name="sex" value="women"> women
+                <input type="radio" name="sex" value="non-binary"> non-binary 
+                <input type="radio" name="sex" value="rather not tell"> rather not tell <br><br>
             
                 
-                <label for=""> Language: </label><input type="text" name = "language"><br><br>
+                <label for=""> Language: </label><input type="text" name = "language" id="language" required><br><br>
                 <label for=""> About: </label>
-                <textarea name="" id="" cols="40" rows="10"></textarea>
+                <textarea name="" id="" cols="40" rows="10" id="about"></textarea>
                 <br><br>
             
                 <button type="submit" class="b">Register</button>
