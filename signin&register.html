@@ -70,8 +70,8 @@
             <h2>Sign in</h2>
             <form method="signin" action="index.html">
                 
-                <label for="">Username:</label><input type="text" name = "Username"><br><br>
-                <label for="">Password:</label><input type="password" name = "password"><br><br>
+                <label for="">Username:</label><input type="text" name = "Username" required><br><br>
+                <label for="">Password:</label><input type="password" name = "password" required><br><br>
                 <button type="submit" class="b">Sign in</button>
             
             </form>
@@ -83,33 +83,43 @@
             <h2>Register</h2>
             <form method="signin" action="index.html">
                 
-                <label for="">Your Username: </label><input type="text" name = "Username" id="username"
-                    minlength="5" maxlength="12"><br><br>
+                <label for="">Your Username: </label><input type="text" name = "Username" id="username"><br>
+                <span id="username_error"></span><br><br>
             
-                <label for="">Your Password: </label><input type="password" name = "password" id="password" required>
-                <label for="">Confirm your password: </label><input type="password" name = "confirmPassword" id="repeatPassword"required><br><br>
+                <label for="">Your Password: </label><input type="password" name = "password" id="password" >
+                <label for="">Confirm your password: </label><input type="password" name = "confirmPassword" id="repeatPassword"><br>
+                <span id="password_error"></span><br>
+                <span id="repeatPassword_error"></span><br><br>
+
             
-                <label for="">Your full name: </label><input type="text" name = "fullname" id="fullName" required><br><br>
+                <label for="">Your full name: </label><input type="text" name = "fullname" id="fullname" >
+                <span id="fullname_error"></span><br><br>
             
                 <label for=""> Address: </label><input type="text" name = "Address" id="address">
-                <label for=""> Country: </label><input type="text" name = "Country" id="country" required >
-                <label for=""> Zipcode: </label><input type="text" name = "Zipcode" id="zipcode" required ><br><br>
+                <label for=""> Country: </label><input type="text" name = "Country" id="country"  >
+                <label for=""> Zipcode: </label><input type="text" name = "Zipcode" id="zipcode"  ><br>
+                <span id="country_error"></span><br>
+                <span id="zipcode_error"></span>
+                <br><br>
             
-                <label for=""> Email: </label><input type="email" name = "email" id="email" required><br><br>
+                <label for=""> Email: </label><input type="email" name = "email" id="email" required>
+                <span id="email_error"></span><br><br>
             
                 <label for=""> Sex: </label>
-                <input type="radio" name="sex" id="man" required> man
+                <input type="radio" name="sex" id="man" > man
                 <input type="radio" name="sex" id="women"> women
                 <input type="radio" name="sex" id="non-binary"> non-binary 
-                <input type="radio" name="sex" id="rather not tell"> rather not tell <br><br>
+                <input type="radio" name="sex" id="rather not tell" checked="checked"> rather not tell 
+                <span id="sex_error"></span><br><br>
             
                 
-                <label for=""> Language: </label><input type="text" name = "language" id="language" required><br><br>
+                <label for=""> Language: </label><input type="text" name = "language" id="language" >
+                <span id="language_error"></span><br><br>
                 <label for=""> About: </label>
                 <textarea name="" id="" cols="40" rows="10" id="about"></textarea>
                 <br><br>
             
-                <button type="submit" class="b" onclick="validate()">Register</button>
+                <button type="submit" class="b" onclick="return validate()">Register</button>
             
             </form>
 
@@ -120,4 +130,5 @@
     
 </body>
 </html>
+
 
