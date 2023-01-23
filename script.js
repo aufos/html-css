@@ -1,20 +1,20 @@
 
-var username = document.getElementById("username").value;
-var password = document.getElementById("password").value;
-var repeatPassword = document.getElementById("repeatPassword").value;
-var fullname = document.getElementById("fullName").value;
-var country = document.getElementById("country").value;
-var zipcode = document.getElementById("zipcode").value;
-var emai = email.getElementById("email").value;
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+var repeatPassword = document.getElementById("repeatPassword");
+var fullname = document.getElementById("fullName");
+var country = document.getElementById("country");
+var zipcode = document.getElementById("zipcode");
+var email = email.getElementById("email");
 
 function validate(){
-    let x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
+    
+  if(username.value == ""){
+    username.style.border = "2px solid red";
+    document.getElementById('username').style.color = "red";
   }
    
 
-    alert("Welcme");
+    alert("Welcome");
         window.location = "index.html";
 }
