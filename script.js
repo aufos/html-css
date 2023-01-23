@@ -1,13 +1,14 @@
 
-var username = document.getElementById("username");
-var password = document.getElementById("password");
-var repeatPassword = document.getElementById("repeatPassword");
-var fullname = document.getElementById("fullName");
-var country = document.getElementById("country");
-var zipcode = document.getElementById("zipcode");
-var email = email.getElementById("email");
+
 
 function validate(){
+  var username = document.getElementById("username");
+  var password = document.getElementById("password");
+  var repeatPassword = document.getElementById("repeatPassword");
+  var fullname = document.getElementById("fullName");
+  var country = document.getElementById("country");
+  var zipcode = document.getElementById("zipcode");
+  var email = email.getElementById("email");
     
   if(username.value == ""){
     username.style.border = "2px solid red";
