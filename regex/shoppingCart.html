@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h2{
+            margin: 40px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        table{
+            width:80%
+        }
+
+        table, th, td {
+            border: 1px solid;
+        }
+
+        td{
+            text-align: center;
+            height: 250px;
+        }
+
+        th{
+            height: 100px;
+            background-color: rgb(48, 57, 50);
+            color: aliceblue;
+        }
+
+        .b{
+            margin-top: 20px;
+            width: 200px;
+            height: 50px;
+            font-size: 19px;
+            background-color: rgb(65, 72, 88);
+            color:aliceblue;
+            float: right;
+            margin-right: 15%;
+        }
+
+        .lastline{
+            height: 100px;
+            background-color: rgb(48, 57, 50);
+            color: aliceblue;
+        }
+
+        .content{
+            font-size: 20px;
+            margin-bottom: 8%;
+        }
+
+        .table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="firstline">
+        <div class="e e1"><a href="index.html"><img src="home.jpeg" alt="this is the home sign" width="60", height="60"></a>
+        </div>
+
+        <div class="e e2"><h1><i> ONMARKET</i></h1></div>
+        
+        <div class="e e3"><form method="search" action="search.html">
+            
+            <input type="text" search="fsearch" class="buttonA" placeholder="search...">
+            <button type="submit" class="buttonA">🔍</button>
+            
+        </form></div>
+        
+        <div class="e e4"><a href="shoppingCart.html"><img src="shopping cart.png" alt="this is the shoppingCart sign" width="50", height="50"></a>
+        </div>
+        
+        <div class="e e5"><a href="sell.html"><img src="sell.png" alt="this is the sell sign" width="50", height="50"></a>
+        </div>
+        
+        <div class="e e6"><a href="signin&register.html"><img src="signinregister.png" alt="this is the signin/register sign" width="50", height="50"></a>
+        </div>
+    </div>
+
+    
+    <h2>YOUR SHOPPING CART</h2>
+
+    <div class="content">   
+        <table class="table">
+        <thead>
+            <tr>
+                <th>Products</th>
+                <th>Quantity</th>
+                <th>Price per product</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            
+            <tr>
+                <td><img src="products.jpg" alt="a picture for a product"></td>
+                <td><center>2</center></td>
+                <td><center>45.50€</center></td>
+            </tr>
+            <tr>
+                <td><img src="products.jpg" alt="a picture for a product"></td>
+                <td><center>1</center></td>
+                <td><center>3.00€</center></td>
+            </tr>
+            <tr>
+                <td><img src="products.jpg" alt="a picture for a product"></td>
+                <td><center>5</center></td>
+                <td><center>10.00€</center></td>
+            </tr>
+            
+        </tbody>
+    
+        <tfoot>
+            <tr>
+                <td class="lastline"><center> Total Price </center></td>
+                <td class="lastline"></td>
+                <td class="lastline"><center>144€</center> </td>
+            </tr>
+        </tfoot>
+        
+    </table>
+    
+    <hr>
+    
+    <button type="submit" class="b">Check out</button>
+
+    </div>
+    
+ 
+    
+</body>
+</html>

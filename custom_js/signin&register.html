@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin / Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="custom.js"></script>
+
+    <style>
+        .content{
+            display: grid;
+            grid-template-columns: 30% 5% 55%;
+            justify-content: center;
+            padding: 60px 45px;
+        }
+
+        h2{
+            font-size: 30px;
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+        
+        label{
+            font-size: 19px;
+            
+        }
+
+        .b{
+            margin-top: 20px;
+            width: 100px;
+            font-size: 19px;
+            background-color: rgb(65, 72, 88);
+            color:aliceblue;
+        }
+
+    </style>
+    
+    
+</head>
+
+<body>
+    <div class="firstline">
+        <div class="e e1"><a href="index.html"><img src="home.jpeg" alt="this is the home sign" width="60", height="60"></a>
+        </div>
+
+        <div class="e e2"><h1><i> ONMARKET</i></h1></div>
+        
+        <div class="e e3"><form method="search" action="search.html">
+            
+            <input type="text" search="fsearch" class="buttonA" placeholder="search...">
+            <button type="submit" class="buttonA">🔍</button>
+            
+        </form></div>
+        
+        <div class="e e4"><a href="shoppingCart.html"><img src="shopping cart.png" alt="this is the shoppingCart sign" width="50", height="50"></a>
+        </div>
+        
+        <div class="e e5"><a href="sell.html"><img src="sell.png" alt="this is the sell sign" width="50", height="50"></a>
+        </div>
+        
+        <div class="e e6"><a href="signin&register.html"><img src="signinregister.png" alt="this is the signin/register sign" width="50", height="50"></a>
+        </div>
+    </div>
+    
+
+    <div class="content">
+        <div class="signin">
+            <h2>Sign in</h2>
+            <form method="signin" action="index.html">
+                
+                <label for="">Username:</label><input type="text" name = "Username" required><br><br>
+                <label for="">Password:</label><input type="password" name = "password" required><br><br>
+                <button type="submit" class="b">Sign in</button>
+            
+            </form>
+        </div>
+
+        <hr>
+        
+        <div class="register">
+            <h2>Register</h2>
+            <form method="signin" action="index.html">
+                
+                <label for="">Your Username: </label><input type="text" name = "Username" id="username"><br>
+                <span id="username_error"></span><br><br>
+            
+                <label for="">Your Password: </label><input type="password" name = "password" id="password" >
+                <label for="">Confirm your password: </label><input type="password" name = "confirmPassword" id="repeatPassword"><br>
+                <span id="password_error"></span><br>
+                <span id="repeatPassword_error"></span><br><br>
+
+            
+                <label for="">Your full name: </label><input type="text" name = "fullname" id="fullname" >
+                <span id="fullname_error"></span><br><br>
+            
+                <label for=""> Address: </label><input type="text" name = "Address" id="address">
+                <label for=""> Country: </label><input type="text" name = "Country" id="country"  >
+                <label for=""> Zipcode: </label><input type="text" name = "Zipcode" id="zipcode"  ><br>
+                <span id="country_error"></span><br>
+                <span id="zipcode_error"></span>
+                <br><br>
+            
+                <label for=""> Email: </label><input type="email" name = "email" id="email" required>
+                <span id="email_error"></span><br><br>
+            
+                <label for=""> Sex: </label>
+                <input type="radio" name="sex" id="man" > man
+                <input type="radio" name="sex" id="women"> women
+                <input type="radio" name="sex" id="non-binary"> non-binary 
+                <input type="radio" name="sex" id="rather not tell" checked="checked"> rather not tell 
+                <span id="sex_error"></span><br><br>
+            
+                
+                <label for=""> Language: </label><input type="text" name = "language" id="language" >
+                <span id="language_error"></span><br><br>
+                <label for=""> About: </label>
+                <textarea name="" id="" cols="40" rows="10" id="about"></textarea>
+                <br><br>
+            
+                <button type="submit" class="b" onclick="return validate()">Register</button>
+            
+            </form>
+
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
+
+

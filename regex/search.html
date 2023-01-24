@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+       .content{
+            display: grid;
+            grid-template-columns: 25% 5% 70%;
+            justify-content: center;
+            padding: 60px 60px;
+
+        }
+
+        button{
+            background-color: rgb(65, 72, 88);
+            color: aliceblue;
+            font-size: 25px;
+            width: 50px;
+        }
+        
+        .filter {
+            padding: 10px,20px;
+            background-color: rgb(65, 72, 88) ;
+            color: aliceblue;
+            
+        }
+
+        .filterchild{
+            margin: 30px;
+            font-size: larger;
+            align-self: center;
+
+        }
+
+        .filterbutton{
+            border: 2px solid;
+            border-color:rgb(48, 57, 50) ;
+            height: 35px;
+            width: 100px;
+            font-size: 20px;
+            color:  rgb(48, 57, 50);
+            justify-content: center;
+            background-color: rgb(209, 214, 211);
+            margin-top: 20px;
+        }
+
+        .search{
+            border: 5px solid  rgb(48, 57, 50);
+            /*background-color: rgb(176, 179, 186);*/
+            justify-content: center;
+        }
+
+        .searchchild{
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            justify-content: space-around;
+        }
+
+        .c{
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+
+        .img{
+            margin: 10px;
+        }
+
+        .s{
+            background-color:rgb(48, 57, 50) ;
+            text-align: center;
+        }
+
+        .in{
+            font-size: 22px;
+            width: 500px;
+            margin: 20px;
+        }
+
+        .b{
+            width: 150px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="firstline">
+        <div class="e e1"><a href="index.html"><img src="home.jpeg" alt="this is the home sign" width="60", height="60"></a>
+        </div>
+
+        <div class="e e2"><h1><i> ONMARKET</i></h1></div>
+        
+        <div class="e e3"><form method="search" action="search.html">
+            
+            <input type="text" search="fsearch" class="buttonA" placeholder="search...">
+            <button type="submit" class="buttonA">🔍</button>
+            
+        </form></div>
+        
+        <div class="e e4"><a href="shoppingCart.html"><img src="shopping cart.png" alt="this is the shoppingCart sign" width="50", height="50"></a>
+        </div>
+        
+        <div class="e e5"><a href="sell.html"><img src="sell.png" alt="this is the sell sign" width="50", height="50"></a>
+        </div>
+        
+        <div class="e e6"><a href="signin&register.html"><img src="signinregister.png" alt="this is the signin/register sign" width="50", height="50"></a>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="filter">
+            <div class="filterchild">
+                <h2><i>Filters</i> </h2>
+                
+                <form method="search" action="search.html">
+                <ul><i>
+                    <li>Price range
+                        <ul style="list-style-type:none;">
+                            <li>
+                                <input type="checkbox" name="price_ranges" value="0 - 20€"> 0 - 20 € 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="price_ranges" value="20 - 50€"> 20 - 50 € 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="price_ranges" value="50 - 100€"> 50 - 100 € 
+                            </li>
+                            <li>
+                                <input type="checkbox" name="price_ranges" value="100€ +"> > 100 € 
+                            </li>
+                        </ul>
+                    </li>
+                    <p></p>
+                    <li>Supplier
+                        <ul style="list-style-type:none;">
+                            <li>
+                                <input type="checkbox" name="Supplier" value="A"> Supplier A
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Supplier" value="B"> Supplier B
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Supplier" value="C"> Supplier C
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Supplier" value="other Supplier"> Other Supplier
+                            </li>
+                        </ul>
+                    </li>
+                    <p></p>
+                    <li>Rating
+                        <ul style="list-style-type:none;">
+                            <li>
+                                <input type="checkbox" name="rating" value="5stars">⭐️⭐️⭐️⭐️⭐️
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rating" value="4stars">⭐️⭐️⭐️⭐️
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rating" value="3stars">⭐️⭐️⭐️
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rating" value="2stars">⭐️⭐️
+                            </li>
+                            <li>
+                                <input type="checkbox" name="rating" value="1star">⭐️
+                            </li>
+                        </ul>
+                    </li>
+                </i>
+                </ul>
+                <button type="submit" class="filterbutton"><i>Confirm</i></button>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="search">
+            <div class="s">
+                <form method="search" action="search.html">
+                    
+                    <input type="text" search="fsearch" class="in" placeholder=" search for a product here ">
+                    <button type="submit" class="b"><i>SEARCH</i> </button>
+                        
+                </form>
+            </div>
+
+            <div class="searchchild">
+                <div class="c">
+                    <div class="c1">
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                        
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                        
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                        
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                    </div>
+                    <div class="c2">
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                        
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                        
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                        
+                        <img src="products.jpg" alt="this is a picture of a product" width="350", height="250", class="img"><br>
+                        <button type="submit" >+</button><br>
+                </div>
+                </div>
+            </div>
+        </div>
+            
+
+    </div>
+    
+    
+</body>
+</html>
