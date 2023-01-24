@@ -146,7 +146,7 @@ function validate(){
       document.getElementById('email').style.border = "1.5px solid rgb(194, 35, 15)";
       validity = false;
     }
-    else if(!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+    else if(!emailCheck(email)){
       document.getElementById("email_error").innerHTML = 
       "<span style='color: rgb(194, 35, 15);'>Please enter valid email address</span>";
       document.getElementById('email').style.border = "1.5px solid rgb(194, 35, 15)";
@@ -179,6 +179,24 @@ function validate(){
     return validity;
   }
   
+  function emailCheck(email){
+    var check1 = false;
+    var check2 = false;
+    var place = 0;
+    for(var i = 1; i< email.length; i++){
+      if(email.charCodeAt(i) = 64){
+        check1 = true;
+        place = i;
+      }
+    }
+    for(var i = place+2; i< email.length; i++){
+      if(email.charCodeAt(i) = 46){
+        check2 = true;
+      }
+    }
+    return check1 && check2;
+  }
+
   function zipcodeCheck(zipcode){
     for(var i = 0; i<4; i++){
       if(!(zipcode.charCodeAt(i) <= 57 && zipcode.charCodeAt(i) >= 48)){
