@@ -50,13 +50,7 @@ function validate(){
       "<span style='color: rgb(194, 35, 15);'>Please enter a valid password as a combination of uppercase letters, lowercase letters, numbers, and symbols.</span>";
       document.getElementById('password').style.border = "1.5px solid rgb(194, 35, 15)";
       validity = false;
-    }/*
-    else if(!passwordCheck(password)){
-      document.getElementById("password_error").innerHTML = 
-      "<span style='color: rgb(194, 35, 15);'>Please do not contain a word in a dictionary or the name of a person.</span>";
-      document.getElementById('password').style.border = "1.5px solid rgb(194, 35, 15)";
-      validity = false;
-    }*/
+    }
     else if(password.length < 14){
       document.getElementById('password').style.border = "1.5px solid rgb(40, 154, 57)";
       document.getElementById("password_error").innerHTML = 
@@ -220,14 +214,6 @@ function validate(){
     return lowercase && uppercase && number && special_character;
   }
   
-  /*
-  function wordCheck(password){
-    const words = require('npm i --save-dev @types/spell-checker-js');
-    words.load('en');
-    const check = words.check(password);
-    return check.length == 0 || check == null;
-  
-  }*/
   
   function fullnameCheck(fullname){
     var tem = true;
