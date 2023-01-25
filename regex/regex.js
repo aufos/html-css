@@ -170,7 +170,9 @@ function validate(){
   }
 
   if(validity){
-    alert("Welcome!");
+    alert("Welcome!\nHere is your information:\n\nUsername: " + username + "\nPassword: " + password +"\nFullname: " 
+    + fullname + "\nAddress: " + address + "\nCountry:" + country +"\nZipcode: " + zipcode + "\nEmail: " + email
+    + "\nSex: " + document.querySelector('input[name="sex"]:checked').value + "\nLanguage: " + language + "\nAbout: \n" + about);
     window.location = "index.html";
   }
   

@@ -173,15 +173,14 @@ function validate(){
       "<span style='color: rgb(40, 154, 57);'>Looks good!</span>";
     }
 
-    alert("Welcome!\nHere is your information:\n\nUsername:" + username + "\nPassword:" + password +"\nFullname:" 
-    + fullname + "\nAddress:" + address + "\nCountry:" + country +"\nZipcode:" + zipcode + "\nEmail:" + email
-    + "\nLanguage:" +  "\nSex:" + document.getElementById("man").value  + language + "\nAbout:\n" + about);
+    alert("Welcome!\nHere is your information:\n\nUsername: " + username + "\nPassword: " + password +"\nFullname: " 
+    + fullname + "\nAddress: " + address + "\nCountry:" + country +"\nZipcode: " + zipcode + "\nEmail: " + email
+    + "\nSex: " + document.querySelector('input[name="sex"]:checked').value + "\nLanguage: " + language + "\nAbout: \n" + about);
 
     if(validity){
-      alert("Welcome!\nHere is your information:\n\nUsername:" + username + "\nPassword:" + password +"\nFullname:" 
-      + fullname + "\nAddress:" + address + "\nCountry:" + country +"\nZipcode:" + zipcode + "\nEmail:" + email
-      + "\nLanguage:" + language + "\nAbout:\n" + about);
-      window.location = "index.html";
+      alert("Welcome!\nHere is your information:\n\nUsername: " + username + "\nPassword: " + password +"\nFullname: " 
+      + fullname + "\nAddress: " + address + "\nCountry:" + country +"\nZipcode: " + zipcode + "\nEmail: " + email
+      + "\nSex: " + document.querySelector('input[name="sex"]:checked').value + "\nLanguage: " + language + "\nAbout: \n" + about);
     }
     
     return validity;

@@ -40,6 +40,23 @@
             height: 120px;
         }
 
+        .radio {
+            appearance: none;
+            border: 2px solid rgb(163, 163, 165);
+            transition: 0.2s all linear;
+            margin-left: 15px;
+            margin-right: 5px;
+            
+            width: 16px;
+            height: 16px;
+            position: relative;
+            top: 6px;
+        }
+
+        input:checked {
+            border: 6px solid rgb(65, 72, 88);
+        }
+
     </style>
     
     
@@ -111,10 +128,10 @@
                 <span id="email_error"></span><br><br>
             
                 <label for=""> Sex: </label>
-                <input type="radio" name="sex" id="man" > man
-                <input type="radio" name="sex" id="women"> women
-                <input type="radio" name="sex" id="non-binary"> non-binary 
-                <input type="radio" name="sex" id="rather not tell" checked="checked"> rather not tell 
+                <input type="radio" name="sex" value="man" class="radio"> man
+                <input type="radio" name="sex" value="women" class="radio"> women
+                <input type="radio" name="sex" value="non-binary" class="radio"> non-binary 
+                <input type="radio" name="sex" value="rather not tell" checked="checked" class="radio"> rather not tell 
                 <span id="sex_error"></span><br><br>
             
                 
