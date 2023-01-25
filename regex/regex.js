@@ -10,8 +10,8 @@ function validate(){
   var language = document.getElementById("language").value;
 
   var pattern = /^.{1,}$/;
-
   var validity = true;
+
   
   if(!pattern.test(username)){
     document.getElementById("username_error").innerHTML = 
@@ -19,8 +19,7 @@ function validate(){
     document.getElementById('username').style.border = "1.5px solid rgb(194, 35, 15)";
     validity = false;
   }
-  else if(username/**/){
-
+  else if(!username.match(/^([A-Z]+.*\W+)$/) || !username.match(/^.{5,12}$/)){
     document.getElementById("username_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>Please enter a valid username of 5-12 characters, start with a capital letter and end with a number or a special character</span>";
     document.getElementById('username').style.border = "1.5px solid rgb(194, 35, 15)";
@@ -33,27 +32,25 @@ function validate(){
   }
 
 
-
-
   if(!pattern.test(password)){
     document.getElementById("password_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>Password is a required field</span>";
     document.getElementById('password').style.border = "1.5px solid rgb(194, 35, 15)";
     validity = false;
   }
-  else if(password.length < 12 ){
+  else if(!password.match(/^.{12,}$/)){
     document.getElementById("password_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>Please enter a valid password at least 12 characters long.</span>";
     document.getElementById('password').style.border = "1.5px solid rgb(194, 35, 15)";
     validity = false;
   }
-  else if(!passwordCheck(password)){
+  else if(!password.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).*$/)){
     document.getElementById("password_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>Please enter a valid password as a combination of uppercase letters, lowercase letters, numbers, and symbols.</span>";
     document.getElementById('password').style.border = "1.5px solid rgb(194, 35, 15)";
     validity = false;
   }
-  else if(password.length < 14){
+  else if(!password.match(/^.{14,}$/)){
     document.getElementById('password').style.border = "1.5px solid rgb(40, 154, 57)";
     document.getElementById("password_error").innerHTML = 
     "<span style='color: rgb(40, 154, 57);'>Not bad! But 14 or more characters would be better!</span>";
@@ -66,7 +63,7 @@ function validate(){
 
 
 
-  if(!pattern.test(password)){
+  if(!pattern.test(repeatPassword)){
     document.getElementById("repeatPassword_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'> Please repeat your password</span>";
     document.getElementById('repeatPassword').style.border = "1.5px solid rgb(194, 35, 15)";
@@ -93,7 +90,7 @@ function validate(){
     document.getElementById('fullname').style.border = "1.5px solid rgb(194, 35, 15)";
     validity = false;
   }
-  else if(!fullnameCheck(fullname)){
+  else if(!fullname.match(/^[A-Za-z]+$/)){
     document.getElementById("fullname_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>Please use alphabet only.";
     document.getElementById('fullname').style.border = "1.5px solid rgb(194, 35, 15)";
@@ -127,7 +124,7 @@ function validate(){
     document.getElementById('zipcode').style.border = "1.5px solid rgb(194, 35, 15)";
     validity = false;
   }
-  else if(zipcode.length !== 6 || !zipcodeCheck(zipcode)){
+  else if(!zipcode.match(/^(\d){4}[A-Z]{2}$/)){
     document.getElementById("zipcode_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>PLease fill in the right format for zipcode(0000AA).</span>";
     document.getElementById('zipcode').style.border = "1.5px solid rgb(194, 35, 15)";
@@ -141,13 +138,13 @@ function validate(){
 
 
 
-  if(!pattern.test(zipcode)){
+  if(!pattern.test(email)){
     document.getElementById("email_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>This is a required field</span>";
     document.getElementById('email').style.border = "1.5px solid rgb(194, 35, 15)";
     validity = false;
   }
-  else if(!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+  else if(!email.match(/^[a-zA-Z]+.*@[a-zA-Z0-9-]+\.+.+$/)){
     document.getElementById("email_error").innerHTML = 
     "<span style='color: rgb(194, 35, 15);'>Please enter valid email address</span>";
     document.getElementById('email').style.border = "1.5px solid rgb(194, 35, 15)";
