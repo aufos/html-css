@@ -5,10 +5,10 @@ var keyPresses = 0;         // variable for tracking key presses
 document.addEventListener("click", function(){mouseClicks++;});     // eventlistener for mouse clicks
 document.addEventListener("keypress", function(){keyPresses++;});   // eventlistener for key presses
 
-var clicks = 0;              // final mouse clicks
-var keyPress = 0;                      // final key presses
-var timeSpent = 0;                      // time spent on the page
-var chars = 0;
+var clicks = 0;              // variable for mouse clicks
+var keyPress = 0;            // variable for key presses
+var timeSpent = 0;           // variable for time spent on the page
+var chars = 0;               // variable for total number of characters typed
 
 function tracking(){
     clicks = mouseClicks;                       // final mouse clicks
@@ -25,8 +25,8 @@ function trackingChar(){
     document.getElementById("language").value.length + document.getElementById("about").value.length;  // Total number of characters typed.
 
     document.getElementById("track").innerHTML = "Number of mouse clicks: " + clicks +  "<br>Total time spent: " + timeSpent +  " seconds"  
-    + "<br>Total key presses: " + keyPress + "<br>Total number of characters typed: " + chars;
+    + "<br>Total key presses: " + keyPress + "<br>Total number of characters typed: " + chars;    // load the content to the hidden div
 
-    document.getElementById("track").removeAttribute("hidden");
+    document.getElementById("track").removeAttribute("hidden");  // make the hidden div visivle
 }
 
