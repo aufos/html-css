@@ -182,15 +182,16 @@ function validate(){
   function emailCheck(email){
     var check1 = false;
     var check2 = false;
-    var place = 0;
+    var pla = 0;
     for(var i = 1; i< email.length; i++){
-      if(email.charCodeAt(i) = 64){
+      if(email.charCodeAt(i) == 64){
         check1 = true;
-        place = i;
+        pla = i;
+        break;
       }
     }
-    for(var i = place+2; i< email.length; i++){
-      if(email.charCodeAt(i) = 46){
+    for(var i = pla+2; i< email.length; i++){
+      if(email.charCodeAt(i) == 46){
         check2 = true;
       }
     }
