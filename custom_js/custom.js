@@ -4,10 +4,12 @@ function validate(){
     var password = document.getElementById("password").value;
     var repeatPassword = document.getElementById("repeatPassword").value;
     var fullname = document.getElementById("fullname").value;
+    var address = document.getElementById("address").value;
     var country = document.getElementById("country").value;
     var zipcode = document.getElementById("zipcode").value;
     var email = document.getElementById("email").value;
     var language = document.getElementById("language").value;
+    var about = document.getElementById("about").value;
   
     var validity = true;
     
@@ -170,9 +172,15 @@ function validate(){
       document.getElementById("language_error").innerHTML = 
       "<span style='color: rgb(40, 154, 57);'>Looks good!</span>";
     }
-  
+
+    alert("Welcome!\nHere is your information:\n\nUsername:" + username + "\nPassword:" + password +"\nFullname:" 
+    + fullname + "\nAddress:" + address + "\nCountry:" + country +"\nZipcode:" + zipcode + "\nEmail:" + email
+    + "\nLanguage:" +  "\nSex:" + document.getElementById("man").value  + language + "\nAbout:\n" + about);
+
     if(validity){
-      alert("Welcome!");
+      alert("Welcome!\nHere is your information:\n\nUsername:" + username + "\nPassword:" + password +"\nFullname:" 
+      + fullname + "\nAddress:" + address + "\nCountry:" + country +"\nZipcode:" + zipcode + "\nEmail:" + email
+      + "\nLanguage:" + language + "\nAbout:\n" + about);
       window.location = "index.html";
     }
     

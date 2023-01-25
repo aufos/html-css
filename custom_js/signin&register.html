@@ -24,7 +24,6 @@
         
         label{
             font-size: 19px;
-            
         }
 
         .b{
@@ -33,6 +32,11 @@
             font-size: 19px;
             background-color: rgb(65, 72, 88);
             color:aliceblue;
+        }
+
+        .about{
+            width: 500px;
+            height: 120px;
         }
 
     </style>
@@ -115,8 +119,7 @@
                 
                 <label for=""> Language: </label><input type="text" name = "language" id="language" >
                 <span id="language_error"></span><br><br>
-                <label for=""> About: </label>
-                <textarea name="" id="" cols="40" rows="10" id="about"></textarea>
+                <label for=""> About: </label><br><br><input type="text" class = "about" name = "about" id = "about">
                 <br><br>
             
                 <button type="button" id="sb" class="b" onclick="return validate()">Register</button>
